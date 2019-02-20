@@ -10,6 +10,7 @@ import ComponentRemovedEvent from './events/ComponentRemovedEvent'
 import Component from './Component';
 import Events from './Events';
 import GameCamera from './GameCamera';
+import GameEvent from './GameEvent';
 import GameObject from './GameObject';
 import GameScene from './GameScene';
 import GameWorld from './GameWorld';
@@ -28,6 +29,7 @@ export {
 	Component,
 	Events,
 	GameCamera,
+	GameEvent,
 	GameObject,
 	GameScene,
 	GameWorld,

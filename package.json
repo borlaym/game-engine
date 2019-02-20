@@ -14,10 +14,12 @@
     "@types/three": "^0.93.22",
     "@types/uuid": "^3.4.4",
     "lodash": "^4.17.11",
-    "react-scripts": "2.1.5",
     "three": "^0.101.1",
     "typescript": "3.3.3",
     "uuid": "^3.3.2"
+  },
+    "devDependencies": {
+    "react-scripts": "2.1.5"
   },
   "repository": {
     "type": "git",

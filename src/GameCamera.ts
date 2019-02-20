@@ -1,5 +1,5 @@
 import { Camera, PerspectiveCamera, Vector3, Ray, Plane } from 'three';
-import rotateAroundPoint from '../utils/rotateAroundPoint';
+import rotateAroundPoint from './utils/rotateAroundPoint';
 import InputController from './InputController';
 
 const CAMERA_ROTATION_SPEED = 0.07;

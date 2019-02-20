@@ -16,6 +16,8 @@ import GameScene from './GameScene';
 import GameWorld from './GameWorld';
 import InputController from './InputController';
 
+import rotateAroundPoint from './utils/rotateAroundPoint';
+
 export {
 	Collision,
 	Outline,
@@ -33,5 +35,7 @@ export {
 	GameObject,
 	GameScene,
 	GameWorld,
-	InputController
+	InputController,
+
+	rotateAroundPoint
 }

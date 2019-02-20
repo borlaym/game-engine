@@ -16,6 +16,7 @@ import GameScene from './GameScene';
 import GameWorld from './GameWorld';
 import InputController from './InputController';
 
+import rotateObjectAroundPoint from './utils/rotateObjectAroundPoint';
 import rotateAroundPoint from './utils/rotateAroundPoint';
 
 export {
@@ -37,5 +38,6 @@ export {
 	GameWorld,
 	InputController,
 
+	rotateObjectAroundPoint,
 	rotateAroundPoint
 }

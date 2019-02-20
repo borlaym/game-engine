@@ -1,5 +1,5 @@
 import { Camera, PerspectiveCamera, Vector3, Ray, Plane } from 'three';
-import rotateAroundPoint from './utils/rotateAroundPoint';
+import rotateObjectAroundPoint from './utils/rotateObjectAroundPoint';
 import InputController from './InputController';
 
 const CAMERA_ROTATION_SPEED = 0.07;
@@ -45,7 +45,7 @@ class GameCamera {
 	}
 
 	private rotate(rotation: number) {
-		rotateAroundPoint(this.camera, this.lookingAt, new Vector3(0, 1, 0), rotation)
+		rotateObjectAroundPoint(this.camera, this.lookingAt, new Vector3(0, 1, 0), rotation)
 	}
 }
 

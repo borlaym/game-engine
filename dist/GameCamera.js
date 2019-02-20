@@ -1,5 +1,5 @@
 import { PerspectiveCamera, Vector3, Ray, Plane } from 'three';
-import rotateAroundPoint from './utils/rotateAroundPoint';
+import rotateObjectAroundPoint from './utils/rotateObjectAroundPoint';
 import InputController from './InputController';
 var CAMERA_ROTATION_SPEED = 0.07;
 var GameCamera = /** @class */ (function () {
@@ -45,7 +45,7 @@ var GameCamera = /** @class */ (function () {
         configurable: true
     });
     GameCamera.prototype.rotate = function (rotation) {
-        rotateAroundPoint(this.camera, this.lookingAt, new Vector3(0, 1, 0), rotation);
+        rotateObjectAroundPoint(this.camera, this.lookingAt, new Vector3(0, 1, 0), rotation);
     };
     return GameCamera;
 }());

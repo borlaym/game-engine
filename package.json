@@ -14,8 +14,6 @@
     "@types/three": "^0.93.22",
     "@types/uuid": "^3.4.4",
     "lodash": "^4.17.11",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
     "react-scripts": "2.1.5",
     "three": "^0.101.1",
     "typescript": "3.3.3",

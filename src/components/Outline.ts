@@ -5,6 +5,8 @@ import Rendering from './Rendering';
 import * as THREE from 'three';
 import GameObject from '../GameObject';
 import GameEvent from '../GameEvent';
+import Events from '../Events';
+import ComponentAddedEvent from '../events/ComponentAddedEvent';
 
 const outlineMaterial = new MeshBasicMaterial( { color: 0xffffff, side: THREE.BackSide } );
 
@@ -21,6 +23,7 @@ export default class Outline extends Component {
 		this.outlineMesh.position.set(parentMesh.position.x, parentMesh.position.y, parentMesh.position.z)
 		this.outlineMesh.material = outlineMaterial
 		this.outlineMesh.scale.multiplyScalar(1.02);
+		Events.emit(new ComponentAddedEvent(this))
 	}
 
 	public update(dt: number): void {

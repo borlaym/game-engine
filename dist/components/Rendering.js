@@ -13,11 +13,14 @@ var __extends = (this && this.__extends) || (function () {
 })();
 import Component from '../Component';
 import Transform from './Transform';
+import Events from '../Events';
+import ComponentAddedEvent from '../events/ComponentAddedEvent';
 var Rendering = /** @class */ (function (_super) {
     __extends(Rendering, _super);
     function Rendering(mesh) {
         var _this = _super.call(this) || this;
         _this.mesh = mesh;
+        Events.emit(new ComponentAddedEvent(_this));
         return _this;
     }
     Rendering.prototype.update = function (dt) {

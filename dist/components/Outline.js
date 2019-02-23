@@ -16,6 +16,8 @@ import { MeshBasicMaterial, Mesh } from 'three';
 import Transform from './Transform';
 import Rendering from './Rendering';
 import * as THREE from 'three';
+import Events from '../Events';
+import ComponentAddedEvent from '../events/ComponentAddedEvent';
 var outlineMaterial = new MeshBasicMaterial({ color: 0xffffff, side: THREE.BackSide });
 var Outline = /** @class */ (function (_super) {
     __extends(Outline, _super);
@@ -30,6 +32,7 @@ var Outline = /** @class */ (function (_super) {
         _this.outlineMesh.position.set(parentMesh.position.x, parentMesh.position.y, parentMesh.position.z);
         _this.outlineMesh.material = outlineMaterial;
         _this.outlineMesh.scale.multiplyScalar(1.02);
+        Events.emit(new ComponentAddedEvent(_this));
         return _this;
     }
     Outline.prototype.update = function (dt) {

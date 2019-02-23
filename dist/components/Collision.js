@@ -13,11 +13,14 @@ var __extends = (this && this.__extends) || (function () {
 })();
 import Component from '../Component';
 import Transform from './Transform';
+import Events from '../Events';
+import ComponentAddedEvent from '../events/ComponentAddedEvent';
 var Collision = /** @class */ (function (_super) {
     __extends(Collision, _super);
     function Collision(collider) {
         var _this = _super.call(this) || this;
         _this.collider = collider;
+        Events.emit(new ComponentAddedEvent(_this));
         return _this;
     }
     Collision.prototype.update = function (dt) {

@@ -1,7 +1,7 @@
 import { Camera, Vector3 } from 'three';
-declare class GameCamera {
+export default class GameCamera {
     readonly camera: Camera;
-    constructor();
+    constructor(camera?: Camera);
     /**
      * Intersect the plane at 0 height to get the point the camera is currently pointing at
      */
@@ -12,5 +12,3 @@ declare class GameCamera {
     readonly position: Vector3;
     private rotate;
 }
-declare const _default: GameCamera;
-export default _default;

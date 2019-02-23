@@ -2,7 +2,7 @@ import { uniq } from 'lodash';
 import GameObject from './GameObject';
 import Collision from './components/Collision';
 import { Raycaster, Vector2 } from 'three';
-import GameCamera from './GameCamera';
+import Globals from './Globals';
 var InputController = /** @class */ (function () {
     function InputController() {
         var _this = this;
@@ -36,7 +36,7 @@ var InputController = /** @class */ (function () {
         var collisionComponents = GameObject.getComponentsOfType(Collision);
         var colliders = collisionComponents.map(function (component) { return component.collider; });
         var mouseRaycaster = new Raycaster();
-        mouseRaycaster.setFromCamera(this.mousePos, GameCamera.camera);
+        mouseRaycaster.setFromCamera(this.mousePos, Globals.gameCamera.camera);
         var intersects = mouseRaycaster.intersectObjects(colliders);
         if (intersects.length > 0) {
             this.mouseColliders = intersects.map(function (intersection) {

@@ -3,8 +3,9 @@ import rotateObjectAroundPoint from './utils/rotateObjectAroundPoint';
 import InputController from './InputController';
 var CAMERA_ROTATION_SPEED = 0.07;
 var GameCamera = /** @class */ (function () {
-    function GameCamera() {
-        this.camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
+    function GameCamera(camera) {
+        if (camera === void 0) { camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100); }
+        this.camera = camera;
         this.camera.rotation.order = 'YXZ';
     }
     Object.defineProperty(GameCamera.prototype, "lookingAt", {
@@ -49,4 +50,4 @@ var GameCamera = /** @class */ (function () {
     };
     return GameCamera;
 }());
-export default new GameCamera();
+export default GameCamera;

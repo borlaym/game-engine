@@ -2,7 +2,7 @@ import { uniq } from 'lodash';
 import GameObject from './GameObject';
 import Collision from './components/Collision';
 import { Raycaster, Vector2 } from 'three';
-import GameCamera from './GameCamera';
+import Globals from './Globals';
 
 class InputController {
 	
@@ -43,7 +43,7 @@ class InputController {
 		const collisionComponents = GameObject.getComponentsOfType(Collision)
 		const colliders = collisionComponents.map(component => component.collider)
 		const mouseRaycaster = new Raycaster();
-		mouseRaycaster.setFromCamera(this.mousePos, GameCamera.camera)
+		mouseRaycaster.setFromCamera(this.mousePos, Globals.gameCamera.camera)
 		const intersects = mouseRaycaster.intersectObjects(colliders)
 		if (intersects.length > 0) {
 			this.mouseColliders = intersects.map(intersection => {

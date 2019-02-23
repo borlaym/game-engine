@@ -4,10 +4,10 @@ import InputController from './InputController';
 
 const CAMERA_ROTATION_SPEED = 0.07;
 
-class GameCamera {
-	public readonly camera: Camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100)
-
-	constructor() {
+export default class GameCamera {
+	constructor(
+		public readonly camera: Camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100)
+	) {
 		this.camera.rotation.order = 'YXZ'
 	}
 
@@ -48,5 +48,3 @@ class GameCamera {
 		rotateObjectAroundPoint(this.camera, this.lookingAt, new Vector3(0, 1, 0), rotation)
 	}
 }
-
-export default new GameCamera()

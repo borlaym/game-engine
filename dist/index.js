@@ -13,6 +13,7 @@ import GameObject from './GameObject';
 import GameScene from './GameScene';
 import GameWorld from './GameWorld';
 import InputController from './InputController';
+import Globals from './Globals';
 import rotateObjectAroundPoint from './utils/rotateObjectAroundPoint';
 import rotateAroundPoint from './utils/rotateAroundPoint';
-export { Collision, Outline, Rendering, Selectable, Transform, ComponentAddedEvent, ComponentRemovedEvent, Component, Events, GameCamera, GameEvent, GameObject, GameScene, GameWorld, InputController, rotateObjectAroundPoint, rotateAroundPoint };
+export { Collision, Outline, Rendering, Selectable, Transform, ComponentAddedEvent, ComponentRemovedEvent, Component, Events, GameCamera, GameEvent, GameObject, GameScene, GameWorld, InputController, Globals, rotateObjectAroundPoint, rotateAroundPoint };

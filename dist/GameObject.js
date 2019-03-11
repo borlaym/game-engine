@@ -46,6 +46,9 @@ var GameObject = /** @class */ (function () {
         });
         return retVal;
     };
+    GameObject.prototype.getComponents = function () {
+        return this.components;
+    };
     GameObject.prototype.getComponent = function (componentClass) {
         var component = this.components.find(function (component) { return component instanceof componentClass; });
         if (!component || !(component instanceof componentClass)) {

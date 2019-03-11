@@ -1,5 +1,6 @@
 import { Scene } from 'three';
+import GameObject from './GameObject';
 export default class GameScene {
     readonly scene: Scene;
-    constructor();
+    add(go: GameObject): void;
 }

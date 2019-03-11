@@ -10,6 +10,7 @@ export default class GameObject {
     readonly uuid: string;
     private components;
     constructor();
+    getComponents(): Component[];
     getComponent<T extends Component>(componentClass: new (...args: any[]) => T): T;
     addComponent(component: Component): void;
     removeComponent<T extends Component>(componentClass: new (...args: any[]) => T): void;
